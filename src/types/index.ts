@@ -26,7 +26,6 @@ export interface IOrderForm {
     payment?: string;
     phone?: string;
     email?: string;
-    total?: number;
     }
 
 /**
@@ -34,7 +33,8 @@ export interface IOrderForm {
  */
 
     export interface IOrder extends IOrderForm {
-        products: string[];
+        items: string[];
+        total: number;
     }
 
 /**
@@ -42,7 +42,6 @@ export interface IOrderForm {
  */
 
     export interface IOrderResult {
-        success: boolean;
         id:string; 
         total: number;
     }
