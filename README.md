@@ -100,9 +100,6 @@ interface IOrderForm {
 
   // Почта
   email?: string;
-
-  // Сумма
-  total?: number;
 }
 ```
 
@@ -111,7 +108,9 @@ interface IOrderForm {
 ```ts
 interface IOrder extends IOrderForm {
   // Массив купленных товаров
-  products: string[];
+  items: string[];
+    // Сумма
+  total: number;
 }
 ```
 
@@ -119,8 +118,6 @@ interface IOrder extends IOrderForm {
 
 ```ts
 interface IOrderResult {
-  // Успешно ли отправлен
-  success: boolean;
   // ID заказа
   id: string;
   // Сумма
